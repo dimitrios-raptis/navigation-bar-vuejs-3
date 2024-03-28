@@ -1,0 +1,22 @@
+$palettes: (
+  'brand': (
+    'primary'               : #252525,
+    'secondary'             : #5A28BE,
+  ),
+  'fill': (
+    'primary'               : #1E465A,
+    'secondary'             : #F3F4F5,
+    'tertiary'              : #B4B4B4,
+    'quaternary'            : #5F1AE2,
+    'quinary'               : #407088,
+  ),
+  'default': (
+    'white'                 : #FFFFFF,
+    'black'                 : #000000
+  ),
+);
+
+
+@function palette($palette, $tone: 'brand') {
+  @return map-get(map-get($palettes, $palette), $tone);
+}

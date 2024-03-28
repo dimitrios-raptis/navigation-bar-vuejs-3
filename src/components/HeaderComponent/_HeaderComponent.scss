@@ -1,0 +1,55 @@
+.header {
+  padding: 0 2rem;
+  background-color: palette('default', "white");
+  position: relative;
+  height: var(--header-hight);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+
+  @include mq(tablet-wide) {
+    padding: 0 2rem;
+  }
+
+  @include mq(desktop) {
+    padding: 0 4rem;
+  }
+
+  &__burger {
+    display: inline-block;
+    cursor: pointer;
+
+    @include mq(tablet-wide) {
+      display: none;
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: calc(100vh - var(--header-hight));
+  top: var(--header-hight);
+  right: 100%;
+  bottom: 0;
+  background-color: palette("fill", "primary");
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  @include mq(tablet-wide) {
+    height: 100%;
+    background-color: transparent;
+    position: unset;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--active {
+    right: 0;
+  }
+}
+

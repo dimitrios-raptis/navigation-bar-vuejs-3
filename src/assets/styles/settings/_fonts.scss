@@ -1,0 +1,13 @@
+ // Founders Grotesk-Regular
+@font-face {
+    font-family: 'founders-grotesk-regular';
+    src: url('/src/assets/fonts/FoundersGrotesk-Regular.woff2?#iefix') format('woff2'),
+         url('/src/assets/fonts/FoundersGrotesk-Regular.woff') format('woff'),
+         url('/src/assets/fonts/FoundersGrotesk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin font-primary() {
+  font-family: 'founders-grotesk-regular';
+}
