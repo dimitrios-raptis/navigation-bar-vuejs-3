@@ -33,13 +33,10 @@
     }
 
     &:last-child {
-      position: fixed;
-      bottom: 2.6rem;
-      right: 0;
-      z-index: 1;
-
-      @include mq(tablet-wide) {
-        position: inherit;
+      @include mq(until-tablet-wide) {
+        display: inline-block;
+        margin-top: 10rem;
+        margin-bottom: 2rem;
       }
 
       .main-nav__link {
